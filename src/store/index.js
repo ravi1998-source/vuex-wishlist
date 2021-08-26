@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
+const axios = require("axios");
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -31,7 +31,13 @@ export default new Vuex.Store({
     },
   },
   mutations: {
-    add_wish(state, wish) {
+    add_wishlist (state, wish) {
+      // all the http request should be done here
+      // eg: 
+      // axios.get('getWaitlist').then((resp)=> console.log(resp)).catch((err)=> console.log(err))
+      axios.get().then().catch()
+    },
+    {    add_wish(state, wish) {
       state.wishes.push(wish);
       state.wwishes = state.wishes;
     },
